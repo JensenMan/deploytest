@@ -11,7 +11,7 @@ app.all('/', function(req,res,next){
 
 app.get("/about", function(req,res){
     var title = "About Page";
-    res.render("views/about", {title: title});
+    res.render("about", {title: title});
 });
 
 app.get("/", function(req,res){
@@ -20,7 +20,7 @@ app.get("/", function(req,res){
         { name: 'Martini', drunkness: 5 },
         { name: 'Scotch', drunkness: 10 }
     ];
-    res.render("views/index", {drinks:drinks});
+    res.render("index", {drinks:drinks});
 });
 app.get("/users", function(req,res){
     res.send("Get request for all users");
